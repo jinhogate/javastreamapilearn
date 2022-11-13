@@ -23,8 +23,12 @@ public class StreamApi {
 			// Creation Stream from a list
 		List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5));
 		Stream<Integer> streamList = list.stream();
+		list.add(6);
 		streamList.forEach(System.out::println);
 		
+		// Multi-threading with Streams 
+		Stream<Integer> streamParallel = list.parallelStream();
+		streamParallel.forEach(System.out::println);
 		
 	}
 
